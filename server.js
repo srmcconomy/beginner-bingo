@@ -39,7 +39,7 @@ const boards = [
       'Map & Compass in Bottom of the Well',
       'Farore\'s Wind',
       'Mirror Shield',
-      'Bolero fo Fire',
+      'Bolero of Fire',
       'Goron Bracelet',
       '3 Boots',
       '1 Skulltula in Shadow Temple',
