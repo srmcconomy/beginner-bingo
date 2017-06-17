@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bingo Popout</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style type="text/css">
+    	html, body {
+    		height: 100%;
+    		width: 100%;
+    		margin: 0;
+    		padding: 0;
+        overflow: hidden;
+    	}
+    </style>
+</head>
+<body>
+  <table class="bingo-popout bingo-element">
+	<th style="height: 20px">
+		<%= row %>
+	</th>
+  <% for (var i = 0; i < 5; i++) { %>
+	<tr>
+		<td class="square"><%= goals[i] %></td>
+	</tr>
+  <% } %>
+
+</table>
+
+<script src="js/bingo-board.js"></script>
+</body>
+</html>
