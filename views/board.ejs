@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OoT Bingo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body style="display:flex;flex-direction:column;align-items:center">
+    <table class="bingo bingo-element">
+		<tr>
+			<td id="tlbr" class="header tlbr">TL-BR</td>
+      <% for (var i = 0; i < 5; i++) { %>
+			<td id="col<%= i %>" class="header col<%= i %>">COL<%= i + 1 %></td>
+      <% } %>
+		</tr>
+    <% for (var i = 0; i < 5; i++) { %>
+    <tr>
+      <td id="row<%= i %>" class="header row<%= i %>">ROW<%= i + 1 %></td>
+      <% for (var j = 0; j < 5; j++) { %>
+      <td id="square<%= i * 5 + j %>" class="square row<%= i %> col<%= j %> <%= i === j ? "tlbr" : "" %> <%= i === 5 - 1 - j ? "bltr" : "" %>"><%= goals[i * 5 + j] %></td>
+      <% } %>
+    </tr>
+    <% } %>
+		<tr>
+			<td id="bltr" class="header bltr">BL-TR</td>
+		</tr>
+</table><div class="bingo-info" style="display: inline-block">
+
+  <p class="small">If popouts don't work, turn off your popup blocker.</p>
+  <% for (let i = 0; i < notes.length; i++) { %>
+    <p class="small"><%= notes[i] %></p>
+  <% } %>
+</div>
+
+<script src="js/bingo-board.js"></script>
+
+</body>
+</html>
