@@ -36,7 +36,6 @@ body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.92rem;
-  line-height: 1.22rem;
 }
 .bingo-square {
   font-size: 93%;
@@ -181,11 +180,12 @@ table.bingo-popout td {
   padding: 0px 6px;
   cursor: pointer;
   text-align: center;
-  border: 1px #424242 solid;
+  border-top: 2px #666 solid;
   margin: 0px;
   background: #000000;
   padding: 0 10px;
   font-size: 19px;
+  height: 19%;
 }
 table.bingo-popout td:hover,
 table.bingo-popout td.hover {

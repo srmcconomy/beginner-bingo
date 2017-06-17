@@ -76,7 +76,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-  if (req.params.id == 1 || req.params.id == 2) {
+  if (req.params.id === 'bingo-popout') {
+    let row = req.query.rowName;
+    let goals = []
+    for (let i = 0; i < 5; i++) {
+      goals[i] = req.query['goal' + i];
+    }
+    res.render('bingo-popout', { row, goals })
+  } else if (req.params.id == 1 || req.params.id == 2) {
     res.render('board', boards[+req.params.id - 1]);
   } else {
     res.render('board', boards[(Math.random() * 2) | 0]);
